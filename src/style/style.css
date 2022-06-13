@@ -1,0 +1,201 @@
+/*login*/
+.style-big-text{
+    font-size: 50px;
+    color: white;
+}
+
+.btn-btn-login{
+    font-size: 20px;
+    width: 135px;
+    height: 40px;
+    left: 139px;
+    top: 654px;
+    background: #F74D4D;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-btn-register{
+    font-size: 20px;
+    width: 135;
+    height: 40px;
+    left: 139;
+    top: 654px;
+    background-color: black;
+    color: white;
+    margin-left: 15px;
+}
+
+.form-blog-login{
+    display: flex;
+    justify-content: center;
+}
+
+/*category*/
+.btn-category-delete{
+    position: absolute;
+    width: 135px;
+    height: 40px;
+    left: 166.74px;
+    top: 16.86px;
+    background: #F74D4D;
+    border-radius: 5px;
+}
+
+.btn-category-edit {
+    position: absolute;
+    width: 135px;
+    height: 40px;
+    left: 5.74px;
+    top: 16.86px;
+    background: #56C05A;
+    border-radius: 5px;
+}
+
+.table-category {
+    width: 75%;
+    margin-left: 80px;
+    margin-top: 10px;
+}
+
+.list-category{
+    color:white;
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.table-product {
+    width: 75%;
+    margin-left: 85px;
+}
+
+.list-product-label {
+    color: white;
+    margin-top: 10px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+}
+
+.edit-button-save {
+    position: absolute;
+    width: 1271px;
+    height: 50px;
+    left: 60px;
+    top: 385px;
+    right: 80px;
+    background: #56C05A;
+    border-radius: 5px;
+    color: white;
+}
+
+.edit-place {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1272px;
+    height: 50px;
+    left: 60px;
+    top: 266px;
+    background: rgba(210, 210, 210, 0.25);
+    border: 2px solid #BCBCBC;
+    border-radius: 5px;
+}
+
+.edit-category-label {
+    position: absolute;
+    width: 160px;
+    height: 33px;
+    left: 60px;
+    top: 185px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 33px;
+    color: #FFFFFF;
+
+}
+
+.description-detail {
+    margin-top: 50px;
+    color: white;
+}
+
+.style-photo-detail {
+    margin-top: 50px;
+}
+
+.style-photo-detail img {
+    width: 100%;
+    height: 90%;
+}
+
+.price-detail {
+    float: right;
+}
+
+.button-buy{
+    width: 100%;
+    background-color: #F74D4D;
+    color: white;
+}
+
+.save-button-product{
+    position: absolute;
+    width: 1272px;
+    height: 50px;
+    left: 60px;
+    top: 793px;
+    background: #56C05A;
+    border-radius: 5px;
+}
+
+.page-of-edit-product{
+    background-color: black;
+    height: 100%;
+    
+}
+
+.btn-addProduct{
+    border: 1px solid green;
+    display: flex;
+}
+
+.add-btn-product{
+    float: right;
+}
+
+.my-masonry-grid {
+    display: -webkit-box;
+    /* Not needed if autoprefixing */
+    display: -ms-flexbox;
+    /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -10px;
+    /* gutter size offset */
+    width: auto;
+}
+
+.my-masonry-grid_column {
+    padding-left: 10px;
+    /* gutter size */
+    background-clip: padding-box;
+}
+
+.my-masonry-grid_column>div {
+    /* change div to reference your elements you put in <Masonry> */
+    /* background: grey; */
+    margin-bottom: 30px;
+}
+
+.text-header-product-detail {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    color: #f74d4d;
+    background-color: white;
+}
+
+.btn-sm btn-success {
+    font-size: 24px;
+    line-height: 50px;
+}
