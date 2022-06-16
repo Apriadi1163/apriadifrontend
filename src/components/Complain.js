@@ -73,10 +73,6 @@ export default function Complain() {
             ? item.senderMessage[item.senderMessage.length - 1].message
             : "Click here to start message",
       }));
-      // const dataContact = {
-      //     ...data,
-      //     message: messages.length > 0 ? messages[messages.length - 1].message : "Click here to start message",
-      //   };
       console.log("Data Contact : ", dataContact);
       setContacts(dataContact);
     });

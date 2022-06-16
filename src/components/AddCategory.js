@@ -1,9 +1,8 @@
 import React, { useState, useContext } from "react";
-import Product3 from "../photo/smalldumbmerch.png";
-import { Navbar, Nav, Container } from "react-bootstrap";
 import { API } from "../config/api";
 import { UserContext } from "../context/userContext";
 import { useNavigate } from "react-router-dom";
+import NavbarAdmin from "../navbar/navbar";
 
 function AddCategory() {
   const navigate = useNavigate();
@@ -28,8 +27,6 @@ function AddCategory() {
     try {
       e.preventDefault();
 
-      // Create Configuration Content-type here ...
-      // Content-type: application/json
       const config = {
         headers: {
           "Content-type": "application/json",
@@ -50,27 +47,7 @@ function AddCategory() {
   return (
     <div>
       <div className="bg-black" style={{ height: "100vh" }}>
-        {
-          <Navbar bg="dark" variant="dark">
-            <Container>
-              <Navbar.Brand href="/homepage">
-                <img
-                  alt=""
-                  src={Product3}
-                  width="60"
-                  height="60"
-                  className="d-inline-block align-top"
-                />{" "}
-              </Navbar.Brand>
-              <Nav className="me-auto; justify-content-end">
-                <Nav.Link href="#">Complain</Nav.Link>
-                <Nav.Link href="/category">Category</Nav.Link>
-                <Nav.Link href="/product">Product</Nav.Link>
-                <Nav.Link href="/">LogOut</Nav.Link>
-              </Nav>
-            </Container>
-          </Navbar>
-        }
+        <NavbarAdmin />
         <div style={{ width: "3em", backgroundColor: "white" }}>
           <h4 className="edit-category-label" style={{ width: "10em" }}>
             Add Category

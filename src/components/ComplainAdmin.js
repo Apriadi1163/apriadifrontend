@@ -67,7 +67,7 @@ export default function ComplainAdmin() {
       });
 
       console.log(dataContact);
-      setContacts([dataContact]);
+      setContacts(dataContact);
     });
   };
 

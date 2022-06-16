@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Container, Row, Col, Card, Nav } from "react-bootstrap";
-import Navbar from "../navbar/navbar";
-import Product1 from "../photo/product1.png";
-import Product2 from "../photo/product2.png";
 import { useNavigate } from "react-router-dom";
 import { API } from "../config/api";
-import { UserContext } from "../context/userContext";
 import NavbarCustomer from "../navbar/navbarCostumer";
 
 function Homepage() {

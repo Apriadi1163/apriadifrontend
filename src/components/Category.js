@@ -1,16 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Row,
-  Table,
-  Button,
-  Modal,
-} from "react-bootstrap";
-import Componentcategory from "../data/Componentcategory";
+import { Row, Table, Button } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
-import Product3 from "../photo/smalldumbmerch.png";
 import { API } from "../config/api";
 import DeleteData from "../modal/delete";
 import Navbara from "../navbar/navbar";

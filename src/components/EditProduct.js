@@ -1,9 +1,7 @@
-import React, { useContext, useState, useEffect } from "react";
-import Product3 from "../photo/smalldumbmerch.png";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { Navbar, Nav, Container, Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { API } from "../config/api";
-import { UserContext } from "../context/userContext";
 
 import Navbara from "../navbar/navbar";
 
@@ -38,10 +36,6 @@ function EditProduct() {
         qty: response.data.data.qty,
       });
       setProduct(response.data.data);
-      // console.log(response.data.data.product);
-
-      //console.log(response.data.data.products);
-      // console.log(response.data.data.products.name);
     } catch (error) {
       console.log(error);
     }
@@ -86,10 +80,6 @@ function EditProduct() {
       for (let p of formData) {
         console.log(p);
       }
-      //formData.set("categoryId", categoryId);
-      // console.log(formData);
-
-      // Object.keys(formData).map((item) => console.log(item));
 
       const response = await API.patch(
         "/product/" + product.id,
@@ -107,15 +97,7 @@ function EditProduct() {
     // getCategories();
     getProduct(id);
   }, []);
-  // useEffect(() => {
-  //   const newCategoryId = product?.categories?.map((item) => {
-  //     return item.id;
-  //   });
 
-  //   setCategoryId(newCategoryId);
-  // }, [product]);
-
-  // console.log(product);
   return (
     <>
       <div className="bg-dark" style={{ height: "100vh" }}>
@@ -228,24 +210,6 @@ function EditProduct() {
                 />
               </Form.Group>
             </div>
-            {/* <div className="card-form-input mt-4 px-2 py-1 pb-2">
-                <div
-                  className="text-secondary mb-1"
-                  style={{ fontSize: "15px" }}
-                >
-                  Category
-                </div>
-                {categories.map((item, index) => (
-                  <label key={index} className="checkbox-inline me-4">
-                    <input
-                      type="checkbox"
-                      value={item.id}
-                      onClick={handleChangeCategoryId}
-                    />{" "}
-                    {item.name}
-                  </label>
-                ))}
-              </div> */}
 
             <div
               class="d-grid gap-2 "

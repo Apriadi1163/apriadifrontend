@@ -1,21 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { UserContext } from "../context/userContext";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Row,
-  Table,
-  Button,
-  Modal,
-} from "react-bootstrap";
-import Componentproduct from "../data/Componentproduct";
-import { useNavigate, Link } from "react-router-dom";
+import { Row, Table, Button } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import { API } from "../config/api";
-import { useQuery } from "react-query";
-import noimg from "../photo/empty.svg";
-import ShowMoreText from "react-show-more-text";
-import Product3 from "../photo/smalldumbmerch.png";
 import Navbara from "../navbar/navbar";
 import DeleteData from "../modal/delete";
 

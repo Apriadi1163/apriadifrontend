@@ -1,11 +1,8 @@
 import React, { useContext } from "react";
-import { Container, Navbar, Nav, NavDropdown } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 import { UserContext } from "../context/userContext";
-
-//import ImgDumbMerch from "../assets/DumbMerch.png";
-import smalldumbmerch from "../photo/smalldumbmerch.png";
 import Product3 from "../photo/smalldumbmerch.png";
 
 export default function Navbara(props) {
@@ -32,6 +29,9 @@ export default function Navbara(props) {
   function navroot() {
     navigate("/complainadmin");
   }
+  function navUser() {
+    navigate("/user");
+  }
 
   return (
     <div>
@@ -47,6 +47,7 @@ export default function Navbara(props) {
             />
           </Navbar.Brand>
           <Nav className="me-auto; justify-content-end">
+            <Nav.Link onClick={navUser}>User</Nav.Link>
             <Nav.Link onClick={navroot}>Complain</Nav.Link>
             <Nav.Link onClick={nextto}>Category</Nav.Link>
             <Nav.Link onClick={stay} style={{ color: "red" }}>

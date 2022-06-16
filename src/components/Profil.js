@@ -1,20 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import {
-  Container,
-  Navbar,
-  Nav,
-  Row,
-  Col,
-  Card,
-  Button,
-} from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 import NavbarCustomer from "../navbar/navbarCostumer";
-import Product3 from "../photo/smalldumbmerch.png";
 import { API } from "../config/api";
 import { UserContext } from "../context/userContext";
 import picture from "../photo/picture.png";
-import dateFormat from "dateformat";
 import small from "../photo/smalldumbmerch.png";
 
 function Profil() {
@@ -23,22 +13,11 @@ function Profil() {
   const [transactions, setTransactions] = useState([]);
 
   const navigate = useNavigate();
-  function navigationEditProf() {
-    navigate("/editpicture");
-  }
 
-  // Fetching profile data from database
-  const getProfile = async () => {
-    try {
-      const response = await API.get("/profile");
-      // Store product data to useState variabel
-      setProfile(response.data.data);
-      console.log(response.data.data);
-    } catch (error) {
-      //console.log(response.data);
-    }
+  const navigationEditProf = (id) => {
+    navigate("/editpicture");
   };
-  //fetching transaction data dari database
+
   const getTransactions = async () => {
     try {
       const response = await API.get("/transactions");
@@ -49,7 +28,6 @@ function Profil() {
     }
   };
   useEffect(() => {
-    getProfile();
     getTransactions();
   }, []);
   console.log(transactions);
@@ -70,12 +48,10 @@ function Profil() {
               <Col md="3">
                 <img
                   src={profile?.image ? profile.image : picture}
+                  // src={profile.image}
                   className="img-fluid rounded"
                   alt="avatar"
                 />
-                <Button onClick={navigationEditProf} variant="primary">
-                  Change picture
-                </Button>{" "}
               </Col>
               <Col md="3" style={{ color: "white" }}>
                 <div className="profile-header" style={{ color: "red" }}>
@@ -140,16 +116,6 @@ function Profil() {
                         >
                           {item.name}
                         </div>
-                        {/* <div
-                          className="mt-2"
-                          style={{
-                            fontSize: "14px",
-                            fontWeight: "300",
-                            color: "#FFFFFF",
-                          }}
-                        >
-                          Price : {item.price}
-                        </div> */}
                         <div
                           className="mt-2"
                           style={{
@@ -185,46 +151,6 @@ function Profil() {
                     </Row>
                   </Container>
                 ))}
-
-                {/* {transactions.map((item, index) => (
-                  <tr>
-                    <div
-                      key={index}
-                      style={{ background: "#303030" }}
-                      className="p-2 mb-1"
-                    >
-                      <Container>
-                        <Row>
-                          <col xs="3">
-                            <img
-                              src={item.product.image}
-                              alt=""
-                              style={{
-                                height: "120px",
-                                width: "170px",
-                                objectFit: "cover",
-                              }}
-                            />
-                          </col>
-                          <col xs="6">
-                            <div>{item.product.name}</div>
-                            <div>
-                              {dateFormat(item.createdAt, "dddd, d mmmm yyyy")}
-                            </div>
-                            <div>{item.product.price}</div>
-                          </col>
-                          <col xs="3">
-                            <img
-                              src={picture}
-                              alt=""
-                              style={{ maxHeight: "70px" }}
-                            />
-                          </col>
-                        </Row>
-                      </Container>
-                    </div>
-                  </tr>
-                ))} */}
               </Col>
             </Row>
           </Col>

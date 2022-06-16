@@ -1,7 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
-import Product3 from "../photo/smalldumbmerch.png";
 import { useNavigate } from "react-router-dom";
-import { Navbar, Nav, Container, Button, Form } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { API } from "../config/api";
 import { UserContext } from "../context/userContext";
 
@@ -39,21 +38,21 @@ function AddProduct() {
       console.log(error);
     }
   };
-  const handleChangeCategoryId = (e) => {
-    const id = e.target.value;
-    const checked = e.target.checked;
+  // const handleChangeCategoryId = (e) => {
+  //   const id = e.target.value;
+  //   const checked = e.target.checked;
 
-    if (checked) {
-      // Save category id if checked
-      setCategoryId([...categoryId, parseInt(id)]);
-    } else {
-      // Delete category id from variable if unchecked
-      let newCategoryId = categoryId.filter((categoryIdItem) => {
-        return categoryIdItem != id;
-      });
-      setCategoryId(newCategoryId);
-    }
-  };
+  //   if (checked) {
+  //     // Save category id if checked
+  //     setCategoryId([...categoryId, parseInt(id)]);
+  //   } else {
+  //     // Delete category id from variable if unchecked
+  //     let newCategoryId = categoryId.filter((categoryIdItem) => {
+  //       return categoryIdItem != id;
+  //     });
+  //     setCategoryId(newCategoryId);
+  //   }
+  // };
 
   const handleChange = (e) => {
     setForm({
