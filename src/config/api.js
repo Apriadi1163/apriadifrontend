@@ -1,7 +1,9 @@
 import axios from "axios";
 
 export const API = axios.create({
-  baseURL: "https://be-dumerch.herokuapp.com/api/v1",
+  baseURL:
+    "https://apriadidumb.herokuapp.com/api/v1" ||
+    "https://localhost:5000/api/v1",
 });
 
 export const setAuthToken = (token) => {
